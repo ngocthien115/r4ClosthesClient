@@ -1,0 +1,97 @@
+﻿
+
+<div>
+    <div class="sidebar">
+        <div class="logo-details">
+            <i class='bx bxl-c-plus-plus'></i>
+            <span class="logo_name">R4 Clothes</span>
+        </div>
+        <ul class="nav-links">
+            <li>
+                <a href="#">
+                    <i class='bx bx-grid-alt'></i>
+                    <span class="link_name">Trang chủ</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#">Danh mục</a></li>
+                </ul>
+            </li>
+            <li class="@classesCate" @onclick="Toggle">
+                <div class="iocn-link">
+                    <a href="#">
+                        <i class='bx bx-collection'></i>
+                        <span class="link_name">Danh mục</span>
+                    </a>
+                    <i class='bx bxs-chevron-down arrow'></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a class="link_name" href="#">Danh mục</a></li>
+                    <li><a href="#">Unisex</a></li>
+                    <li><a href="#">Áo nam</a></li>
+                    <li><a href="#">Quần nam</a></li>
+                    <li><a href="#">Áo nữ</a></li>
+                    <li><a href="#">Quần nữ</a></li>
+                    <li><a href="#">Áo khoác</a></li>
+                    <li><a href="#">Áo ngoài</a></li>
+                    <li><a href="#">Hàng giảm giá</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-pie-chart-alt-2'></i>
+                    <span class="link_name">Sản phẩm</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#">Sản phẩm</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-compass'></i>
+                    <span class="link_name">Giới thiệu</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#">Giới thiệu</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-history'></i>
+                    <span class="link_name">History</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#">History</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-cog'></i>
+                    <span class="link_name">Cài đặt</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#">Cài đặt</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="profile-details">
+                    <div class="profile-content">
+                        <img src="http://wasabi-files.lbstatic.nu/files/looks/large/2015/05/26/4500956_mr_wichtig_2.jpg?1432644964" alt="profileImg">
+                    </div>
+                    <div class="name-job">
+                        <div class="profile_name">Vũ Ngọc Thiện</div>
+                    </div>
+                    <i class='bx bx-log-out'></i>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+@code {
+    public string classesCate = "";
+    public string classesSetting = "";
+    private void Toggle()
+    {
+        classesCate = classesCate == "" ? classesCate = "showMenu" : classesCate = ""; // toán tử 3 ngôi
+    }
+}

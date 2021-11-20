@@ -1,0 +1,20 @@
+﻿@page "/"
+@inject R4ClothesClient.Helpers.IUploadImage _uploadImage
+
+<h5>Hello</h5>
+
+<InputFile id="fileInput" OnChange="UploadFiles" hidden />
+<MudButton HtmlTag="label"
+           Variant="Variant.Filled"
+           Color="Color.Primary"
+           StartIcon="@Icons.Filled.CloudUpload"
+           for="fileInput">
+    Upload Files
+</MudButton>
+<h4>Đường dẫn file: @path</h4>
+
+<MudButton Color="@Color.Info" OnClick="Gui">Bấm vào đây để test upload</MudButton>
+<h4>Url trả về : @url</h4>
+
+
+
